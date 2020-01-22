@@ -1,21 +1,21 @@
 export default [
     {
-        name: "william",
+        name: "William",
         email: "william@gmail.com",
         role: "frontend engineer"
     },
     {
-        name: "john",
-        email: "john@gmail.com",
+        name: "Matt",
+        email: "Matt@gmail.com",
         role: "frontend engineer" 
     },
     {
-        name: "hannah",
+        name: "Hannah",
         email: "hannah@gmail.com",
         role: "backend engineer" 
     },
     {
-        name: "james",
+        name: "James",
         email: "james@gmail.com",
         role: "designer" 
     }
