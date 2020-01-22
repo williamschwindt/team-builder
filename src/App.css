@@ -19,11 +19,11 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   margin: 50px auto;
-  max-width: 760px;
+  max-width: 900px;
 }
 
 .team-member {
-  width: 300px;
+  width: 350px;
   margin: 20px 30px;
   padding: 10px;
   box-shadow: 0px 0px 10px black;
@@ -43,7 +43,7 @@ form {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
 }
 

@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 
 function Form(props) {
-    const [teamMemeber, setTeamMember] = useState({
+    const [teamMember, setTeamMember] = useState({
         name: "",
         email: "",
         role: ""
     });
 
-    const changeHandler = (e) => {
-        setTeamMember({ ...teamMemeber, [e.target.name]: e.target.value });
+    const changeHandler = e => {
+        setTeamMember({ ...teamMember, [e.target.name]: e.target.value })
     }
 
-    const submitHandler = (e) => {
+    const submitHandler = e => {
         e.preventDefault();
-        const newMember = { ...teamMemeber };
-        props.addNewTeamMember(newMember);
-        setTeamMember({ name: "", email: "", role: "" });
+        props.addNewTeamMember({ ...teamMember });
+        setTeamMember({
+            name: "",
+            email: "",
+            role: ""
+        });
     }
 
     return(
@@ -24,17 +27,17 @@ function Form(props) {
             <form onSubmit={submitHandler}>
                 <div className="form-row">
                     <label htmlFor="name">Name</label>
-                    <input onChange={changeHandler} name="name" type="text" value={teamMemeber.name} />
+                    <input required onChange={changeHandler} name="name" type="text" value={teamMember.name} />
                 </div>
 
                 <div className="form-row">
                     <label htmlFor="email">Email</label>
-                    <input onChange={changeHandler} name="email" type="text" value={teamMemeber.email}/>
+                    <input required onChange={changeHandler} name="email" type="text" value={teamMember.email}/>
                 </div>
 
                 <div className="form-row extra">
                     <label htmlFor="role">Role</label>
-                    <input onChange={changeHandler} name="role" type="text" value={teamMemeber.role}/>
+                    <input required onChange={changeHandler} name="role" type="text" value={teamMember.role}/>
                 </div>
 
                 <button type="submit">Submit</button>
